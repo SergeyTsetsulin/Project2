@@ -30,6 +30,7 @@ int main()
     {
         for (int j = 0; j < b; j++)
         {
+            array[i][j] = rand()%999;
             array[i][j] = 55;
         }
     }
