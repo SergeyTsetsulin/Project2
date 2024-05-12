@@ -2,14 +2,14 @@
 #include <windows.h> 
 using namespace std;
 
-/* Программа запрашивает у пользователя размер массива двумерного. Пользователь задет размер массива и заполняет его вручную */
+/* Программа запрашивает у пользователя размер массива двумерного. Пользователь задет размер массива и программа заполняет его рандомными числами */
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-
+  
     HANDLE h;
     h = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -30,7 +30,7 @@ int main()
     {
         for (int j = 0; j < b; j++)
         {
-            cin >> array[i][j];
+            array[i][j] = rand()%9;
         }
     }
     cout << "\nДвумерный массив равен:\n";
@@ -42,6 +42,7 @@ int main()
         }
         cout << "\n";
     }
+    cout << "Добавил строку";
 
     SetConsoleTextAttribute(h, 15);
     return 0;
