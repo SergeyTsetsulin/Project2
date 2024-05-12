@@ -42,6 +42,8 @@ int main()
         }
         cout << "\n";
     }
+    cout << "Добавил строку";
+
 
     SetConsoleTextAttribute(h, 15);
     return 0;
